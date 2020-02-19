@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./resources/css/app.css">
+    <title>Componentes</title>
+</head>
+<body>
+    <div id="app">
+        <saludo></saludo>
+        <div class="container" style="display: grid; grid-template-columns: 4% 22% 1fr;">
+            <div></div>
+            <div>
+                <div>
+                    Elementos en la escena
+                </div>
+                <div>
+                    <!-- modulos disponibles -->
+                    <div class="controls-form-component-container">
+                        <div style="display: grid; grid-template-columns: 13% 1fr;">
+                            <div style="background-color: chartreuse; border-radius: 7px; padding: 10%;">
+                                <img src="./resources/svg/support.svg" width="100%" alt="icon tool">
+                            </div>
+                            <div style="display:flex; justify-content:center; align-content:center; flex-direction:column;">
+                                <p style="margin:0px;">Text</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <page-container-form-component></page-container-form-component>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- Inicio de la importacion de modulos -->
+    <script src="resources/js/componentes/Saludo.js"></script>
+    <script src="resources/js/componentes/row.js"></script>
+    <script src="resources/js/componentes/ControlFormsComponent.js"></script>
+
+
+    <script src="resources/js/componentes/template/PageContainerFormComponent.js"></script>
+    <script src="resources/js/componentes/template/PageRowsFormComponent.js"></script>
+    <script src="resources/js/componentes/template/PageColumnsFormComponent.js"></script>
+    <!-- Fin de la importacion de modulos -->
+    <script src="resources/js/app_part_3.js"></script>
+</body>
+</html>
