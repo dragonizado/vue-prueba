@@ -7,9 +7,6 @@ body{
     min-height: 100vh;
 }
 
-.controls-form-component-container{
-    background-color: #e8e7e8; padding: 7px;
-}
 
 .btn-temporal-ok{
     background-color: #15cc15;
@@ -34,4 +31,45 @@ body{
     padding: 7px;
     width: 30px;
     border: 1px solid grey;
+}
+
+#delete-form-item{
+    background-color: #cc2115;
+    opacity: 0.40;
+    height: 140px;
+}
+
+
+/* Componente base */
+.controls-form-component {
+    background-color: #e8e7e8;
+    padding: 7px;
+    border-bottom: 1px solid grey;
+}
+
+.controls-form-component>.controls-form-component-inside{
+    display: grid; grid-template-columns: 13% 1fr;
+}
+
+/* hidden elements from base */
+
+.column>.controls-form-component>.controls-form-component-inside{
+    display: none;
+}
+
+#form-controls-tools>.controls-form-component>.display-form-element{
+    display: none;
+}
+
+
+.controls-form-component>.controls-form-component-inside>.img-icon{
+    border-radius: 7px; padding: 10%;
+}
+
+.controls-form-component>.controls-form-component-inside>.body{
+    display:flex; justify-content:center; align-content:center; flex-direction:column;
+}
+
+.controls-form-component>.controls-form-component-inside>.body>p{
+    margin:0px;
 }

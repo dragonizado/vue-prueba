@@ -1,12 +1,15 @@
 Vue.component('page-columns-form-component',{
     template:`
-        <div v-for="column of columns" class="column" style="border:1px solid black; min-height:138px; text-align:center;" :style="{width:columnsW+'%'}">hello</div>
+        <div class="column" :id="idColumn" style="border:1px solid black;  text-align:center;" :style="{width:columnsW+'%'}"></div>
         `,
-    data(){
-        return {
-            columns:1
-        }
-    },
-    props:['columnsW']
+        mounted(){
+            
+            const lista = this.$el;
+            Sortable.create(lista,{
+                animation:150,
+                group:  'display-columns' 
+            })
+        },
+    props:['columnsW','idColumn']
     
 })

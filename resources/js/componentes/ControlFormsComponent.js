@@ -1,14 +1,26 @@
 Vue.component('control-forms-component',{
     template:
     `
-    <div>
-        <div class="row" style="border: 1px solid #ababab;">
-            <div v-for="column of columns" class="column" style=" display:inline-block; text-align:center;" :style="{width:columnsWidth+'%'}">hello</div>
-        </div>
-        <button @click="columns++">Nueva columna</button>
-        <button @click="columns--">Eliminar columna</button>
+    <div id="form-controls-tools">
+        <input-form-component></input-form-component>
+        <input-search-list-btn-form-component></input-search-list-btn-form-component>
+        <form-input-search-component></form-input-search-component>
+        <form-checkout-component></form-checkout-component>
+        <document-adjunt-form-component></document-adjunt-form-component>
     </div>
-    `,
+        `,
+        mounted(){
+            const lista_tools = this.$el
+
+            Sortable.create(lista_tools,{
+                animation: 150,
+                group: { 
+                    name:'display-columns',
+                    pull:'clone',
+                    put:false
+                }
+            })
+        },
     data(){
         return{
             controls:[

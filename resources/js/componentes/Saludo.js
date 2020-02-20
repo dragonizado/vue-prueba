@@ -3,7 +3,7 @@ Vue.component('saludo',{
     `<h1>{{ saludo }}</h1>`,
     data(){
         return {
-            saludo:'Page Generator'
+            saludo:'Form Generator'
         }
     }
 })

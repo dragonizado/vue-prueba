@@ -1,7 +1,7 @@
 Vue.component('page-rows-form-component',{
     template:`
         <div class="row" style="border: 1px solid #ababab; display:flex">
-            <page-columns-form-component v-for="column of columns" :columnsW="columnsWidth"></page-columns-form-component>
+            <page-columns-form-component v-for="column of columns" :columnsW="columnsWidth" :idColumn="columnsIdName"></page-columns-form-component>
             <div style="">
                 <button class="btn-temporal-ok" @click="columns++">+</button>
                 <button class="btn-temporal-bad" @click="columns--">-</button>
@@ -26,6 +26,9 @@ Vue.component('page-rows-form-component',{
                 alert('No se puede tener más de 12 columnas')
                 return (100 / 12)
             }
+        },
+        columnsIdName(){
+            return 'display-column-' + this.columns
         }
     }
 })
